@@ -6,12 +6,10 @@
 // Global configuration object
 var PROSPR_CONFIG = {
   // Security settings
-  ADMIN_CODE: ADMIN_CODE,
   SESSION_TIMEOUT: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
   
   // Analysis settings
   DEVIATION_THRESHOLD: 0.15, // 15% threshold for significant differences
-  MINIMUM_AMOUNT: 10, // Minimum amount to consider for analysis
   
   // Data processing settings
   DATA_PROCESSING: {

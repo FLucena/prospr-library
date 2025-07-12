@@ -1,6 +1,6 @@
-# PROSPR Financial Planning System
+# PROSPR Financial Planning Library
 
-A Google Apps Script that automatically analyzes budget data and generates a compact report.
+A Google Apps Script library that automatically analyzes budget data and generates compact reports.
 
 ## What It Does
 
@@ -11,15 +11,15 @@ A Google Apps Script that automatically analyzes budget data and generates a com
 
 ## Quick Setup
 
-1. Open your Google Spreadsheet
-2. Go to `Extensions > Apps Script`
-3. Copy all `.gs` files into your Apps Script project
-4. Save and refresh your spreadsheet
-5. You'll see a new "PROSPR Tools" menu
+1. Create a new Google Apps Script project
+2. Copy all `.gs` files into your project
+3. Save the project
+4. Add the library to your spreadsheet's Apps Script
+5. You'll see a new "Admin" menu
 
 ## Data Format
 
-Your spreadsheet must have:
+The target spreadsheet must have:
 - Sheet named "Monthly Budget"
 - Data starting at row 4
 - Columns with "Budget" and "Actual" headers
@@ -36,15 +36,15 @@ Row 8: [Total Food]  | 800    | 930
 
 ## Usage
 
-1. Set up your budget data in the "Monthly Budget" sheet
-2. Use `PROSPR Tools > Generate Report`
-3. Use `PROSPR Tools > Send Email`
+1. Set up budget data in the target spreadsheet's "Monthly Budget" sheet
+2. Use `Admin > Monthly Comparative Report`
+3. Use `Admin > Create Email Draft`
 
 ## Security
 
 **Important**: Change the default password in `env.gs` before using:
-1. Open `env.gs`
-2. Change `ADMIN_CODE: 'PROSPR2025'` to a secure password
+1. Open or create `env.gs`
+2. Change `ADMIN_CODE` to a secure password
 3. Use at least 8 characters
 
 ## Configuration
@@ -52,7 +52,6 @@ Row 8: [Total Food]  | 800    | 930
 Key settings in `Config.gs`:
 - `DEVIATION_THRESHOLD`: 15% (minimum deviation to flag)
 - `DATA_START_ROW`: 4 (where data begins)
-- `MINIMUM_AMOUNT`: 10 (minimum amount to analyze)
 
 ## Troubleshooting
 
@@ -82,5 +81,5 @@ Key settings in `Config.gs`:
 
 For issues:
 1. Check the troubleshooting section above
-2. Verify your data format matches the example
+2. Verify the target spreadsheet's data format matches the example
 3. Ensure you changed the default password 
